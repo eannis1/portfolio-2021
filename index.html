@@ -5,37 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/html5reset.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="shortcut icon" type="image/png" href="images/noun_shaker_outline.png"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=B612">
+    <link rel="shortcut icon" type="image/png" href="images/noun_shaker_dark.png"/>
     <!-- Image by Ralf Schmitzer at The Noun Project <a href="https://thenounproject.com/search/?q=cocktail+shaker&i=219969</a> -->
     <title>Homebound Cocktails</title>
   </head>
   <body>
     <div class="skip"><a href="#main">Skip to Main Content</a></div>
-    <nav>
-        <ul class="dropdown">
-            <li><a href="index.html">Home</a></li>
-            <div class="dropdown-content">
-                <li><a href="martini.html">Martini</a></li>
-                <li><a href="old_fashioned.html">Old Fashioned</a></li>
-                <li><a href="whiskey_sour.html">Whiskey Sour</a></li>
-                <li><a href="manhattan.html">Manhattan</a></li>
-                <li><a href="moscow_mule.html">Moscow Mule</a></li>
+    <header>
+        <nav>
+            <div tabindex="0" class="dropdown">
+                <ul class="dropdown-content">
+                    <li id="home_icon"><a href="index.html">Home</a></li>
+                    <li><a href="martini.html">Martini</a></li>
+                    <li><a href="old_fashioned.html">Old Fashioned</a></li>
+                    <li><a href="whiskey_sour.html">Whiskey Sour</a></li>
+                    <li><a href="manhattan.html">Manhattan</a></li>
+                    <li><a href="moscow_mule.html">Moscow Mule</a></li>
+                    <li><a href="gallery.html">Recipe Gallery</a></li>
+                </ul>
             </div>
-        </ul>
-      </nav>
-
-    <header id="main">
-        <h1>Homebound Cocktails</h1>
-            <p>Welcome to Homebound Cocktails, a curated collection of both classic and classily-altered cocktail concoctions.</p>
-            <p>The following pages describe some of the most well-known and best-beloved cocktails. 
-                With a few ingredients and some simple tools, you can make amazing cocktails at home.
-                No expertise required! Just grab the listed ingredients, lay out the needed tools, and enjoy
-                mixing the highly-rated drinks in this collection. 
-            </p>
+            <div id="main"></div>
+            <h1>Homebound Cocktails</h1> 
+            <div id="content-mobile">
+                <p>Welcome to Homebound Cocktails, a curated collection of both classic and classily-altered cocktail concoctions.</p>
+            </div>
+            <div id="content-nonmobile">
+                <p>The following pages describe some of the most well-known and best-beloved cocktails. 
+                    With a few ingredients and some simple tools, you can make amazing cocktails at home.
+                    No expertise required! Just grab the listed ingredients, lay out the needed tools, and enjoy
+                    mixing the highly-rated drinks in this collection. </p>
+            </div>
+        </nav>
     </header>
 
-    <main class="history">
-        <div class = "cocktail_history"> 
+    <main class="container">
+        <div class = "history"> 
             <h2>History of the Cocktail</h2>
             <p>Where did the cocktail come from? David Wondrich, spirits historian and author of <i>Imbibe</i>,
             relates that the first mention of such a drink was in an 1803 newspaper from New Hampshire. The article

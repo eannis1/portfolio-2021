@@ -1,37 +1,205 @@
+/*Color palette generated through https://coolors.co/*/
+
 html{
     scroll-behavior: smooth;
 }
 
 body{
-  /*background-color: lightslategray;*/
+  background-color: #F6F5F4;
   font-size: 18px;
   margin: 0;
   padding: 0;
+  font-family: B612, Geneva, sans-serif;
 }
 
-nav {
-  background-color: lightgrey;
-  padding: 25px 0; 
-  text-align: center;
+body a {
+  color: black;
 }
 
-nav a {
+.skip a{
+  background: #AB9F9B;
   color: black;
   font-weight: bold;
   text-decoration: none;
+  position: absolute;
+  left: 0;
+  top: -50px;
+  padding: 7px;
+  -webkit-transition: top 0.5s ease-out;
+  transition: top 0.5s ease-out;
+  z-index: 1;
 }
 
-/*NEED TO WORK WITH FLEX HERE
-nav li {
-  display:flex;
+.skip a:focus {
+  top: 10px;
 }
-*/
 
-h1{
+header{
+  background-attachment: fixed; /* Parallax effect */     
+  background-position: center;  /* Parallax effect */
+  background-repeat: no-repeat; /* Parallax effect */
+  background-size: cover;       /* Parallax effect */
+  color: #F6F5F4;
+  height:fit-content;           /*Parallax effect*/
+  box-shadow: 0 0 10px #241909;
+  background-image: url('../images/home_image.jpg');
+}
+
+nav {
+  background-color: transparent;
+  display: grid;
+  place-items: center;
+}
+
+nav li a {
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+  color: #F6F5F4;
+  font-weight: bold;
+}
+
+nav a {
+  padding: 0.5em; 
+  /* changed - was 1rem 0.5rem */
+}
+
+h1 {
   font-size: 50px;
   line-height: 1;
-  padding: 50px 0;
+  padding: 0.15em;
+  margin: 0 0.25em 0.25em;
   text-align: center;
+  border: 1px solid #241909;
+  border-radius: 2px;
+  background-color: rgba(36, 25, 9, 88%);
+  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+}
+
+header p {
+  color: #F6F5F4;
+  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+  font-size: 24px;
+  text-align: center;
+  border: 1px solid #241909;
+  border-radius: 1%;
+  margin: 0 0.5em 0.5em;
+  padding: 0.5em;
+  background-color: rgba(36, 25, 9, 88%);
+}
+
+#content-mobile {
+  display:block;
+}
+#content-nonmobile {
+  display:none;
+}
+
+/* Dropdown list modified from
+https://www.w3schools.com/css/css_dropdowns.asp, 
+https://moderncss.dev/css-only-accessible-dropdown-navigation-menu/,
+and https://lage.us/CSS-Onclick-Dropdown-Menu.html*/
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  z-index:2; 
+  padding:0;
+  margin:10%;
+  outline:0;
+  text-align: center;
+}
+
+/* style for the button */
+.dropdown:before {
+  content: "Menu"; 
+  color:#F6F5F4;
+  padding: 5px 10px;
+  border: 1px solid #AB9F9B;
+  border-radius:1px;
+  background: #73130B;
+}
+
+.dropdown:focus { 
+  pointer-events:none; 
+}
+
+/* If :focus detected the dropdown menu is displayed by making it visible */
+.dropdown:focus .dropdown-content { 
+  opacity:1; 
+  visibility:visible; 
+}
+
+.dropdown-content {
+  background-color: #73130B;
+  box-shadow: 40px rgba(36,25,9,0.2);
+  padding: 0.5em 1em; 
+  text-align: center;
+  pointer-events: auto;
+  position: absolute;
+  /* Pull up to overlap the parent list item very slightly */
+  top: calc(100% - 0.25rem);
+  /* Use the left from absolute position to shift the left side */
+  left: 50%;
+  /* Use translateX to shift the menu 50% of its width back to the left  */
+  transform: translateX(-50%);
+  transform-origin: top center;
+  opacity: 0.3;
+  visibility: hidden;
+  transition: 280ms all ease-out;
+  z-index: 1;
+  border-radius:1px;
+  box-shadow: 0 0 10px #241909;
+}
+
+/* Custom bullet points from https://isotropic.co/how-to-set-custom-bullets-in-ul-lists/ */
+/*add icon to current link*/
+#home_icon:before {
+  content: url("../images/noun_shaker_dark_small.png");
+}
+
+#martini_icon:before {
+  content: url("../images/noun_martini_icon_small.png")
+}
+
+#old_fashioned_icon:before {
+  content: url("../images/noun_old_fasioned_icon_small.png")
+}
+
+#whiskey_sour_icon:before {
+  content: url("../images/noun_whiskey_sour_icon_small.png")
+}
+
+#manhattan_icon:before {
+  content: url("../images/noun_Manhattan_icon_small.png")
+}
+
+#moscow_mule_icon:before {
+  content: url("../images/noun_copper_cup_small.png")
+}
+
+#gallery_icon:before {
+  content: url("../images/noun_shaker_outline_small.png")
+}
+
+.container {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.history {
+  padding: 1em 0 0 0;
+}
+
+.history p{
+  font-size: 22px;
+  line-height: 1.5;
+  text-align: left;
+  color: black;
+  margin: 0.5em;
 }
 
 h2{
@@ -40,93 +208,89 @@ h2{
   text-align: center;
 }
 
-.skip a{
-  background: lightgray;
-  position: absolute;
-  left: 0;
-  top: -50px;
-  padding: 7px;
-  -webkit-transition: top 1s ease-out;
-  transition: top 1s ease-out;
-  z-index: 1;
+img {
+  flex: 100%;
+  width: 90%;
+  box-shadow: 0 0 10px #241909;
+  padding: 0;
+  margin: 1em;
+  align-self: center;
 }
 
-.skip a:focus {
-  top: 10px;
-  border-style: solid; 
-  border-width: 1px;
+.recipe {
+  flex: 100%;
+  width: 80%;
+  border: 10px solid #645853;
+  border-style: inset;
+  padding: 0.5em;
+  margin: 1em;
+  font-size: 22px;
+  line-height: 1.5;
+  text-align: left;
+  color: black;
+  background-color: rgba(227, 224, 221, .75);
 }
 
-/* Dropdown list modified from
-https://www.w3schools.com/css/css_dropdowns.asp*/
-
-/*When I hover, the menu scoots to the side - why?!*/
-.dropdown {
-  position: absolute;
-  display:inline-block;
+.recipe ul {
+  padding: 0 2em;
 }
 
-nav .dropdown-content {
-  display: none;
-  position: relative;
+.recipe p{
+  text-align: center;
 }
 
-nav:focus-within .dropdown-content {
-  display: block;
-  background-color:lightgray;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  padding: 12px 16px;
-  /*
-  min-width: 160px;
-  z-index: 1;
-  */
+h3{
+  font-size: 26px;
+  line-height: 1.5;
+  text-align: left;
+  font-weight: normal;
 }
 
 footer{
   display: grid;
   grid-template-rows: 2fr 1fr;
-  background-color: black;
-  color: white;
-  padding-top: 30px;
+  background-color: #241909;
+  color: #F6F5F4;
+  padding: 1em 0.5em 0.5em 0;
   text-align: center;
+  box-shadow: 0 0 10px #241909;
 }
 
-header p{
-  color: white;
-  font-size: 24px;
-  padding: 0 100px;
-  text-align: center;
+/* Image gallery modified from https://www.w3schools.com/css/css_image_gallery.asp*/
+.gallery {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
-.home p{
-  font-size: 22px;
-  line-height: 1.5;
-  text-align: left;
-  color: black;
-  margin-top: 1em;
-  margin-bottom: 1em;
-  padding: 0 1.25em;
+.gallery img {
+  border: 1px solid #F6F5F4;
+  border-radius: 1px;
+  padding: 5px;
+  width: 150px;
 }
 
-.container{
-  /*
-  display: grid;
-  grid-template-columns: 1fr 3fr 3fr 1fr;
-  grid-template-rows: auto auto auto auto;
-  grid-row-gap: 20px;
-  */
-}
-
-/*NOTE I only want the Parallax image on the first page - How do I do that?*/
-header{
-  background-attachment: fixed; /* Parallax effect */     
-  background-position: center;  /* Parallax effect */
-  background-repeat: no-repeat; /* Parallax effect */
-  background-size: cover;       /* Parallax effect */
-  color: white;
-  height: 400px;                /* Parallax effect */
-  margin-bottom: 25px;
-  background-image: url('../images/home_image.jpg');
+@media all and (min-width: 880px){
+  
+  #content-mobile, #content-nonmobile {
+    display:block;
+    padding: 0 8em;
+    border: none;}
+  .container {
+    flex-direction: row;
+  }
+  .recipe {
+    padding: 10px;
+    flex: 50%;
+  }
+  img {
+    padding: 10px;
+    flex: 50%;
+  }
+  /* .drink_image {
+    padding: 10px;
+    flex: 50%;
+  } */
 }
 
 /*The code below is included for accessibility to turn off 
