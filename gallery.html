@@ -11,56 +11,133 @@
     <title>Gallery</title>
   </head>
 
-<!--Image gallery modified from https://www.w3schools.com/css/css_image_gallery.asp*/-->
-<body>
+  <body>
   <div class="skip"><a href="#main">Skip to Main Content</a></div>
-  <header>
-    <nav>
-      <div tabindex="0" class="dropdown">
-        <ul class="dropdown-content">
-        <!--<img href="images/noun_shaker_dark.png"/>-->
-            <li><a href="index.html">Home</a></li>
-            <li><a href="martini.html">Martini</a></li>
-            <li><a href="old_fashioned.html">Old Fashioned</a></li>
-            <li><a href="whiskey_sour.html">Whiskey Sour</a></li>
-            <li><a href="manhattan.html">Manhattan</a></li>
-            <li><a href="moscow_mule.html">Moscow Mule</a></li>
-            <li id="gallery_icon"><a href="gallery.html">Recipe Gallery</a></li>
-        </ul>
-      </div>
-    <div id="main"></div>
-    <h1>Recipe Gallery</h1>
-  </nav>
-</header>
+    <header>
+      <nav>
+        <div tabindex="0" class="dropdown">
+          <ul class="dropdown-content">
+          <!--<img href="images/noun_shaker_dark.png"/>-->
+              <li><a href="index.html">Home</a></li>
+              <li><a href="martini.html">Martini</a></li>
+              <li><a href="old_fashioned.html">Old Fashioned</a></li>
+              <li><a href="whiskey_sour.html">Whiskey Sour</a></li>
+              <li><a href="manhattan.html">Manhattan</a></li>
+              <li><a href="moscow_mule.html">Moscow Mule</a></li>
+              <li id="gallery_icon"><a href="gallery.html">Recipe Gallery</a></li>
+          </ul>
+        </div>
+        <div id="main"></div>
+      <h1>Recipe Gallery</h1>
+    </nav>
+  </header>
 
-  <main class="container">
-    <div class="gallery">
-      <img src="images/black_manhattan.jpg" alt="Black Manhattan">
-      <img src="images/blackberry_whiskey_sour.jpg" alt="Blackberry Whiskey Sour">
-      <img src="images/classic_manhattan.jpg" alt="Classic Manhattan">
-      <img src="images/classic_martini.jpg" alt="Classic Martini">
-      <img src="images/classic_moscow_mule.jpg" alt="Classic Moscow Mule">
-      <img src="images/classic_old_fashioned.jpg" alt="Classic Old Fashioned">
-      <img src="images/classic_whiskey_sour.jpg" alt="Classic Whiskey Sour">
-      <img src="images/classic_whiskey_sour_egg.jpg" alt="Classic Whiskey Sour with Egg">
-      <img src="images/clint_eastwood.jpg" alt="Clint Eastwood">
-      <img src="images/dark_n_stormy.jpg" alt="Dark 'N Stormy">
-      <img src="images/dirty_martini.jpg" alt="Dirty Martini">
-      <img src="images/espresso_martini.jpg" alt="Espresso Martini">
-      <img src="images/greenpoint.jpg" alt="Greenpoint">
-      <img src="images/irish_old_fashioned.jpg" alt="Irish Old Fashioned">
-      <img src="images/kentucky_mule.jpg" alt="Kentucky Mule">
-      <img src="images/london_mule.jpg" alt="London Mule">
-      <img src="images/maple_old_fashioned.jpg" alt="Maple Old Fashioned">
-      <img src="images/new_york_sour.jpg" alt="New York Sour">
-      <img src="images/smoking_rosemary_old_fashioned.jpg" alt="Smoking Rosemary Old Fashioned">
-      <img src="images/zucchini_martini.jpg" alt="Zucchini Martini">
+  <main class="gallery">
+    <div class="basic_card">  
+      <a href="manhattan.html"><img src="images/black_manhattan.jpg" alt="Black Manhattan"></a>
+      <h2>Black Manhattan</h2>
+    </div>
+
+    <div class="basic_card">
+      <a href="whiskey_sour.html"><img src="images/blackberry_whiskey_sour.jpg" alt="Blackberry Whiskey Sour"></a>
+      <h2>Blackberry Whiskey Sour</h2>
+    </div>
+
+    <div class="basic_card">
+      <a href="manhattan.html"><img src="images/classic_manhattan.jpg" alt="Classic Manhattan"></a>
+      <h2>Classic Manhattan</h2>
+    </div>
+  
+    <div class="basic_card">
+      <a href="martini.html"><img src="images/classic_martini.jpg" alt="Classic Martini"></a>
+      <h2>Classic Martini</h2>
+    </div>
+
+    <div class="basic_card">
+      <a href="moscow_mule.html"><img src="images/classic_moscow_mule.jpg" alt="Classic Moscow Mule"></a>
+      <h2>Classic Moscow Mule</h2>
+    </div>
+
+    <div class="basic_card">
+      <a href="old_fashioned.html"><img src="images/classic_old_fashioned.jpg" alt="Classic Old Fashioned"></a>
+      <h2>Classic Old Fashioned</h2>
+    </div>
+
+    <div class="basic_card">
+      <a href="whiskey_sour.html"><img src="images/classic_whiskey_sour.jpg" alt="Classic Whiskey Sour"></a>
+      <h2>Classic Whiskey Sour</h2>
+    </div>
+
+    <div class="basic_card"></div>
+      <a href="whiskey_sour.html"><img src="images/classic_whiskey_sour_egg.jpg" alt="Classic Whiskey Sour with Egg"></a>
+      <h2>Classic Whiskey Sour with Egg White</h2>
+    </div>
+
+    <div class="basic_card">
+      <a href="manhattan.html"><img src="images/clint_eastwood.jpg" alt="Clint Eastwood"></a>
+      <h2>Clint Eastwood</h2>
+    </div>
+
+    <div class="basic_card">
+      <a href="moscow_mule.html"><img src="images/dark_n_stormy.jpg" alt="Dark 'N Stormy"></a>
+      <h2>Dark 'N Stormy</h2>
+    </div>
+
+    <div class="basic_card">
+      <a href="martini.html"><img src="images/dirty_martini.jpg" alt="Dirty Martini"></a>
+      <h2>Dirty Martini</h2>
+    </div>
+
+    <div class="basic_card">
+      <a href="martini.html"><img src="images/espresso_martini.jpg" alt="Espresso Martini"></a>
+      <h2>Espresso Martini</h2>
+    </div>
+
+    <div class="basic_card">
+      <a href="manhattan.html"><img src="images/greenpoint.jpg" alt="Greenpoint"></a>
+      <h2>Greenpoint</h2>
+    </div>
+
+    <div class="basic_card">
+      <a href="old_fashioned.html"><img src="images/irish_old_fashioned.jpg" alt="Irish Old Fashioned"></a>
+      <h2>Irish Old Fashioned</h2>
+    </div>
+
+    <div class="basic_card">
+      <a href="moscow_mule.html"><img src="images/kentucky_mule.jpg" alt="Kentucky Mule"></a>
+      <h2>Kentucky Mule</h2>
+    </div>
+
+    <div class="basic_card">
+      <a href="moscow_mule.html"><img src="images/london_mule.jpg" alt="London Mule"></a>
+      <h2>London Mule</h2>
+    </div>
+
+    <div class="basic_card">
+      <a href="old_fashioned.html"><img src="images/maple_old_fashioned.jpg" alt="Maple Old Fashioned"></a>
+      <h2>Maple Old Fashioned</h2>
+    </div>
+
+    <div class="basic_card">
+      <a href="whiskey_sour.html"><img src="images/new_york_sour.jpg" alt="New York Sour"></a>
+      <h2>New York Sour</h2>
+    </div>
+
+    <div class="basic_card">
+      <a href="old_fashioned.html"><img src="images/smoking_rosemary_old_fashioned.jpg" alt="Smoking Rosemary Old Fashioned"></a>
+      <h2>Smoking Rosemary Old Fashioned</h2>
+    </div>
+
+    <div class="basic_card">
+      <a href="martini.html"><img src="images/zucchini_martini.jpg" alt="Zucchini Martini"></a>
+      <h2>Zucchini Martini</h2>    
     </div>
   </main>
-  
+    
   <footer>
     <p>University of Michigan School of Information <br/>
     &copy; Erin Annis - Design of Complex Websites Winter 2021</p>
   </footer> 
+
 </body>
 </html>

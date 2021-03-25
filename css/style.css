@@ -17,7 +17,7 @@ body a {
 }
 
 .skip a{
-  background: #AB9F9B;
+  background: #e3e0ddbf;
   color: black;
   font-weight: bold;
   text-decoration: none;
@@ -82,7 +82,7 @@ header p {
   font-size: 24px;
   text-align: center;
   border: 1px solid #241909;
-  border-radius: 1%;
+  border-radius: 2px;
   margin: 0 0.5em 0.5em;
   padding: 0.5em;
   background-color: rgba(36, 25, 9, 88%);
@@ -116,7 +116,7 @@ and https://lage.us/CSS-Onclick-Dropdown-Menu.html*/
   color:#F6F5F4;
   padding: 5px 10px;
   border: 1px solid #AB9F9B;
-  border-radius:1px;
+  border-radius: 2px;
   background: #73130B;
 }
 
@@ -148,7 +148,7 @@ and https://lage.us/CSS-Onclick-Dropdown-Menu.html*/
   visibility: hidden;
   transition: 280ms all ease-out;
   z-index: 1;
-  border-radius:1px;
+  border-radius:2px;
   box-shadow: 0 0 10px #241909;
 }
 
@@ -185,7 +185,6 @@ and https://lage.us/CSS-Onclick-Dropdown-Menu.html*/
 .container {
   display: flex;
   flex-flow: column wrap;
-  justify-content: center;
   align-items: center;
   justify-content: center;
 }
@@ -209,7 +208,7 @@ h2{
 }
 
 img {
-  flex: 100%;
+  /* flex: 100%; */
   width: 90%;
   box-shadow: 0 0 10px #241909;
   padding: 0;
@@ -218,9 +217,9 @@ img {
 }
 
 .recipe {
-  flex: 100%;
+  /* flex: 100%; */
   width: 80%;
-  border: 10px solid #645853;
+  border: 10px solid #241909;
   border-style: inset;
   padding: 0.5em;
   margin: 1em;
@@ -228,7 +227,7 @@ img {
   line-height: 1.5;
   text-align: left;
   color: black;
-  background-color: rgba(227, 224, 221, .75);
+  background-color: #e3e0ddbf;
 }
 
 .recipe ul {
@@ -257,18 +256,69 @@ footer{
 }
 
 /* Image gallery modified from https://www.w3schools.com/css/css_image_gallery.asp*/
+/* https://www.w3schools.com/howto/howto_css_flip_card.asp, 
+https://www.smashingmagazine.com/2020/02/magic-flip-cards-common-sizing-problem/ */
+
 .gallery {
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.basic_card {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery h2 {
+  display: none;
+  position: absolute;
+  border: 10px solid #241909;
+  border-style: inset;
+  padding: 0.5em;
+  background-color: #e3e0ddbf;
+  z-index: -1;
+}
+
+.gallery a {
+  text-decoration: none;
 }
 
 .gallery img {
-  border: 1px solid #F6F5F4;
-  border-radius: 1px;
-  padding: 5px;
-  width: 150px;
+  position: relative;
+  order: 1;
 }
+
+.gallery img:focus {
+  filter:grayscale;
+}
+
+/* .gallery:focus {
+  pointer-events:none;
+} */
+
+/* If :focus detected the color changes */
+/* .gallery:focus img {
+  -webkit-animation-name: color_change;
+    animation-name: color_change;
+  -webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards; 
+}
+
+@-webkit-keyframes color_change {
+  0% {filter:grayscale();}
+  100% {filter:none;}
+}
+
+@keyframes color_change {
+  0% {filter:grayscale();}
+  100% {filter:none;}
+} */
 
 @media all and (min-width: 880px){
   
@@ -286,6 +336,18 @@ footer{
   img {
     padding: 10px;
     flex: 50%;
+  }
+  .gallery h2 {
+    display: block;
+    position: absolute;
+    border: 10px solid #241909;
+    border-style: inset;
+    padding: 0.5em;
+    background-color: #e3e0ddbf;
+    z-index: -1;
+  }
+  .gallery img:hover, img:focus {
+    opacity: 0.15;
   }
   /* .drink_image {
     padding: 10px;
