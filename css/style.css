@@ -42,7 +42,7 @@ header{
   height:auto;                  /*Parallax effect*/
   color: #F6F5F4;
   box-shadow: 0 0 10px #241909;
-  background-image: url('../images/home_image.jpg');
+  background-image: url('../images/home_image_small.jpg');
 }
 
 nav {
@@ -322,13 +322,6 @@ https://www.smashingmagazine.com/2020/02/magic-flip-cards-common-sizing-problem/
 @media all and (min-width: 880px){
   
   header{
-    background-attachment: fixed; /* Parallax effect */     
-    background-position: center;  /* Parallax effect */
-    background-repeat: no-repeat; /* Parallax effect */
-    background-size: cover;       /* Parallax effect */
-    color: #F6F5F4;
-    height:fit-content;           /*Parallax effect*/
-    box-shadow: 0 0 10px #241909;
     background-image: url('../images/home_image.jpg');
   }
   
