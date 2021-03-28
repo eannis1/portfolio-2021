@@ -36,14 +36,14 @@ body a {
 
 /* Try getting rid of size, fixed one at a time to see if that works */
 header{
-  background-attachment: fixed; /*Parallax effect */
+  /* background-attachment: fixed; Parallax effect */
   background-position: center;  /* Parallax effect */
   background-repeat: no-repeat; /* Parallax effect */
   background-size: cover;       /* Parallax effect */
   height:auto;                  /*Parallax effect */
   color: #F6F5F4;
   box-shadow: 0 0 10px #241909;
-  background-image: url('../images/home_image_small.jpg');
+  background-image: url('../images/home_image.jpg');
 }
 
 nav {
@@ -190,6 +190,11 @@ and https://lage.us/CSS-Onclick-Dropdown-Menu.html*/
   justify-content: center;
 }
 
+.container a {
+  text-decoration: none;
+  margin-top: 1em;
+}
+
 .history {
   padding: 1em 0 0 0;
 }
@@ -253,6 +258,7 @@ footer{
   padding: 1em 0.5em 0.5em 0;
   text-align: center;
   box-shadow: 0 0 10px #241909;
+  margin-top: 1em;
 }
 
 /* Image gallery modified from https://www.w3schools.com/css/css_image_gallery.asp*/
