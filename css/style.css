@@ -6,10 +6,13 @@ html{
 
 body{
   background-color: #F6F5F4;
-  font-size: 18px;
+  font-size: 22px;
   margin: 0;
   padding: 0;
-  font-family: B612, Geneva, sans-serif;
+  font-family: Raleway;
+  /* font-family: "Duru Sans"; */
+  /* font-family: B612, Geneva, sans-serif; */
+  /* font-family: Raleway, sans-serif; */
 }
 
 body a {
@@ -18,11 +21,10 @@ body a {
 
 .skip a{
   background: #e3e0ddbf;
-  color: black;
   font-weight: bold;
   text-decoration: none;
   position: absolute;
-  left: 0;
+  left: 0.25em;
   top: -50px;
   padding: 7px;
   -webkit-transition: top 0.5s ease-out;
@@ -34,9 +36,7 @@ body a {
   top: 10px;
 }
 
-/* Try getting rid of size, fixed one at a time to see if that works */
 header{
-  /* background-attachment: fixed; Parallax effect */
   background-position: center;  /* Parallax effect */
   background-repeat: no-repeat; /* Parallax effect */
   background-size: cover;       /* Parallax effect */
@@ -61,8 +61,7 @@ nav li a {
 }
 
 nav a {
-  padding: 0.5em; 
-  /* changed - was 1rem 0.5rem */
+  padding: 0.5em;
 }
 
 h1 {
@@ -153,7 +152,6 @@ and https://lage.us/CSS-Onclick-Dropdown-Menu.html*/
   box-shadow: 0 0 10px #241909;
 }
 
-/* Custom bullet points from https://isotropic.co/how-to-set-custom-bullets-in-ul-lists/ */
 /*add icon to current link*/
 #home_icon:before {
   content: url("../images/noun_shaker_dark_small.png");
@@ -191,7 +189,6 @@ and https://lage.us/CSS-Onclick-Dropdown-Menu.html*/
 }
 
 .container a {
-  text-decoration: none;
   margin-top: 1em;
 }
 
@@ -199,22 +196,22 @@ and https://lage.us/CSS-Onclick-Dropdown-Menu.html*/
   padding: 1em 0 0 0;
 }
 
-.history p{
-  font-size: 22px;
+.history p {
   line-height: 1.5;
   text-align: left;
-  color: black;
   margin: 0.5em;
 }
 
-h2{
+h2 {
   font-size: 32px;
   line-height: 1.5;
   text-align: center;
+  color: #73130B;
+  text-transform: uppercase; 
+  font-weight: bold;
 }
 
 img {
-  /* flex: 100%; */
   width: 90%;
   box-shadow: 0 0 10px #241909;
   padding: 0;
@@ -223,34 +220,31 @@ img {
 }
 
 .recipe {
-  /* flex: 100%; */
   width: 80%;
   border: 10px solid #241909;
   border-style: inset;
   padding: 0.5em;
-  font-size: 22px;
   line-height: 1.5;
   text-align: left;
-  color: black;
   background-color: #e3e0ddbf;
 }
 
 .recipe ul {
-  padding: 0.5em 0.25em 0.5em 1em;;
+  padding: 0.5em 0.25em 0.5em 1em;
 }
 
-.recipe p{
+.recipe p {
   text-align: center;
 }
 
-h3{
+h3 {
   font-size: 26px;
   line-height: 1.5;
   text-align: left;
   font-weight: normal;
 }
 
-footer{
+footer {
   display: grid;
   grid-template-rows: 2fr 1fr;
   background-color: #241909;
@@ -298,8 +292,10 @@ https://www.smashingmagazine.com/2020/02/magic-flip-cards-common-sizing-problem/
   order: 1;
 }
 
-.gallery img:focus {
-  filter:grayscale;
+/* .gallery img:focus { */
+.gallery img:active {
+  opacity: 0.15;
+  /* filter:grayscale; */
   /* https://eannis1.github.io/portfolio-2021/ - try active instead */
  }
 
@@ -330,9 +326,9 @@ https://www.smashingmagazine.com/2020/02/magic-flip-cards-common-sizing-problem/
 @media all and (min-width: 880px){
   
   header{
-    background-image: url('../images/home_image.jpg');
+    background-attachment: fixed; /*Parallax effect */
   }
-  
+
   #content-mobile, #content-nonmobile {
     display:block;
     padding: 0 8em;
@@ -360,10 +356,6 @@ https://www.smashingmagazine.com/2020/02/magic-flip-cards-common-sizing-problem/
   .gallery img:hover, img:focus {
     opacity: 0.15;
   }
-  /* .drink_image {
-    padding: 10px;
-    flex: 50%;
-  } */
 }
 
 /*The code below is included for accessibility to turn off 
