@@ -72,7 +72,11 @@ h1 {
   text-align: center;
   border: 1px solid #241909;
   border-radius: 2px;
-  background-color: rgba(36, 25, 9, 88%);
+  /* background-color: rgba(36, 25, 9, 88%); */
+  /* background-color: rgba(37, 6, 3, 88%); */
+  /* background-color: rgba(93, 16, 9, 88%); */
+  /* background-color: rgba(37, 6, 3, 88%); */
+  background-color: rgba(75, 13, 7, 90%);
   text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
 }
 
@@ -85,7 +89,9 @@ header p {
   border-radius: 2px;
   margin: 0 0.5em 0.5em;
   padding: 0.5em;
-  background-color: rgba(36, 25, 9, 88%);
+  /* background-color: rgba(36, 25, 9, 88%); */
+  /* background-color: rgba(37, 6, 3, 88%); */
+  background-color: rgba(75, 13, 7, 90%);
 }
 
 #content-mobile {
@@ -115,9 +121,14 @@ and https://lage.us/CSS-Onclick-Dropdown-Menu.html*/
   content: "Menu"; 
   color:#F6F5F4;
   padding: 5px 10px;
-  border: 1px solid #AB9F9B;
+  /* border: 1px solid #AB9F9B; */
+  border: 1px solid #250603;
   border-radius: 2px;
-  background: #73130B;
+  /* background-color: rgba(37, 6, 3, 90%); */
+  /* background: rgba(93, 16, 9, 90%); */
+  background: rgba(75, 13, 7, 90%);
+  /* background: #73130b; */
+  /* background: #250603; */
 }
 
 .dropdown:focus { 
@@ -131,7 +142,10 @@ and https://lage.us/CSS-Onclick-Dropdown-Menu.html*/
 }
 
 .dropdown-content {
-  background-color: #73130B;
+  /* background-color: #73130B; */
+  /* background: #5D1009; */
+  /* background-color: rgba(37, 6, 3, 97%); */
+  background-color: rgba(75, 13, 7, 98%);
   box-shadow: 40px rgba(36,25,9,0.2);
   padding: 0.5em 1em; 
   text-align: center;
@@ -207,6 +221,8 @@ h2 {
   line-height: 1.5;
   text-align: center;
   color: #73130B;
+  /* color: rgb(37, 6, 3); */
+  /* color: #5d1009; */
   text-transform: uppercase; 
   font-weight: bold;
 }
@@ -247,7 +263,8 @@ h3 {
 footer {
   display: grid;
   grid-template-rows: 2fr 1fr;
-  background-color: #241909;
+  /* background-color: #241909; */
+  background-color: rgb(37, 6, 3);
   color: #F6F5F4;
   padding: 1em 0.5em 0.5em 0;
   text-align: center;
