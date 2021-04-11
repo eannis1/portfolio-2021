@@ -9,10 +9,7 @@ body{
   font-size: 22px;
   margin: 0;
   padding: 0;
-  font-family: Raleway;
-  /* font-family: "Duru Sans"; */
-  /* font-family: B612, Geneva, sans-serif; */
-  /* font-family: Raleway, sans-serif; */
+  font-family: Raleway, sans-serif;
 }
 
 body a {
@@ -50,32 +47,30 @@ nav {
   background-color: transparent;
   display: grid;
   place-items: center;
+  font-weight: bold;
+}
+
+nav li {
+  display: block;
+  margin: 0.5em;
 }
 
 nav li a {
   text-decoration: none;
   text-align: center;
-  display: inline-block;
-  color: #F6F5F4;
   font-weight: bold;
-}
-
-nav a {
-  padding: 0.5em;
+  color: #F6F5F4;
+  
 }
 
 h1 {
   font-size: 50px;
   line-height: 1;
   padding: 0.15em;
-  margin: 0 0.25em 0.25em;
+  margin: 0.5em 0.25em 0.25em;
   text-align: center;
   border: 1px solid #241909;
   border-radius: 2px;
-  /* background-color: rgba(36, 25, 9, 88%); */
-  /* background-color: rgba(37, 6, 3, 88%); */
-  /* background-color: rgba(93, 16, 9, 88%); */
-  /* background-color: rgba(37, 6, 3, 88%); */
   background-color: rgba(75, 13, 7, 90%);
   text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
 }
@@ -89,8 +84,6 @@ header p {
   border-radius: 2px;
   margin: 0 0.5em 0.5em;
   padding: 0.5em;
-  /* background-color: rgba(36, 25, 9, 88%); */
-  /* background-color: rgba(37, 6, 3, 88%); */
   background-color: rgba(75, 13, 7, 90%);
 }
 
@@ -121,14 +114,9 @@ and https://lage.us/CSS-Onclick-Dropdown-Menu.html*/
   content: "Menu"; 
   color:#F6F5F4;
   padding: 5px 10px;
-  /* border: 1px solid #AB9F9B; */
   border: 1px solid #250603;
   border-radius: 2px;
   background-color: rgba(75, 13, 7, 90%);
-  /* background-color: rgba(37, 6, 3, 90%); */
-  /* background: rgba(93, 16, 9, 90%); */
-  /* background: #73130b; */
-  /* background: #250603; */
 }
 
 .dropdown:focus { 
@@ -142,11 +130,7 @@ and https://lage.us/CSS-Onclick-Dropdown-Menu.html*/
 }
 
 .dropdown-content {
-  /* background-color: #73130B; */
-  /* background: #5D1009; */
-  /* background-color: rgba(37, 6, 3, 97%); */
   background-color: rgba(75, 13, 7, 98%);
-  box-shadow: 40px rgba(36,25,9,0.2);
   padding: 0.5em 1em; 
   text-align: center;
   pointer-events: auto;
@@ -195,6 +179,62 @@ and https://lage.us/CSS-Onclick-Dropdown-Menu.html*/
   content: url("../images/noun_shaker_outline_small.png")
 }
 
+#form_icon:before {
+  content: url("../images/noun_shaker_dark_small.png");
+}
+
+.form_container {
+  padding: 1em;
+}
+
+input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #241909;
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: 18px;
+}
+
+*:focus {
+  background: #e3e0ddbf;
+}
+
+textarea {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #241909;
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: 18px;
+}
+
+input[type=checkbox]{
+  width: 5%;
+  border: 1px solid #241909;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  background-color: #4b0d07;
+  color: white;
+  font-weight: bold;
+  font-size: inherit;
+  font-family: inherit;
+  padding: 14px 20px;
+  margin: 8px 0;
+  cursor: pointer;
+  width: 100%;
+}
+
+input[type=submit]:hover {
+  opacity: 0.8;
+}
+
 .container {
   display: flex;
   flex-flow: column wrap;
@@ -221,18 +261,19 @@ h2 {
   line-height: 1.5;
   text-align: center;
   color: #73130B;
-  /* color: rgb(37, 6, 3); */
-  /* color: #5d1009; */
   text-transform: uppercase; 
   font-weight: bold;
 }
 
 img {
-  width: 90%;
+  width: 80%;
   box-shadow: 0 0 10px #241909;
   padding: 0;
   margin: 1em;
   align-self: center;
+}
+.img1_lower {
+  display:none;
 }
 
 .recipe {
@@ -260,16 +301,40 @@ h3 {
   font-weight: normal;
 }
 
+/* Buttons modified from https://www.w3schools.com/howto/howto_css_next_prev.asp and 
+https://css-tricks.com/examples/ButtonMaker/# */
+
+.button {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.button a {
+  text-decoration: none;
+  color:#F6F5F4;
+  padding: 5px 10px;
+  border: 1px solid #250603;
+  border-radius: 2px;
+  background-color: rgba(75, 13, 7, 90%);
+  margin: 1em 1em 0 1em;
+}
+
+.button a:hover, .button a:active {
+  background-color:rgb(37, 6, 3);
+}
+
+.previous, .next {
+  display: none;
+}
+
 footer {
-  display: grid;
-  grid-template-rows: 2fr 1fr;
-  /* background-color: #241909; */
   background-color: rgb(37, 6, 3);
   color: #F6F5F4;
   padding: 1em 0.5em 0.5em 0;
   text-align: center;
   box-shadow: 0 0 10px #241909;
   margin-top: 1em;
+  position: sticky;
 }
 
 /* Image gallery modified from https://www.w3schools.com/css/css_image_gallery.asp*/
@@ -281,44 +346,17 @@ https://www.smashingmagazine.com/2020/02/magic-flip-cards-common-sizing-problem/
   flex-flow: column wrap;
   align-items: center;
   justify-content: center;
+  margin-bottom: 1em;
 }
 
-.basic_card {
-  display: flex;
-  flex-flow: column wrap;
-  align-items: center;
-  justify-content: center;
+.basic_card h2 {
+  margin: 0.5em 0 0 0;
+  font-size: 22px;
 }
 
-.gallery h2 {
-  display: none;
-  position: absolute;
-  border: 10px solid #241909;
-  border-style: inset;
-  padding: 0.5em;
-  background-color: #e3e0ddbf;
-  z-index: -1;
+.basic_card a {
+  color: #73130B;
 }
-
-.gallery a {
-  text-decoration: none;
-}
-
-.gallery img {
-  position: relative;
-  order: 1;
-}
-
-/* .gallery img:focus { */
-.gallery img:active {
-  opacity: 0.15;
-  /* filter:grayscale; */
-  /* https://eannis1.github.io/portfolio-2021/ - try active instead */
- }
-
-/* .gallery:focus {
-  pointer-events:none;
-} */
 
 /* If :focus detected the color changes */
 /* .gallery:focus img {
@@ -340,8 +378,107 @@ https://www.smashingmagazine.com/2020/02/magic-flip-cards-common-sizing-problem/
   100% {filter:none;}
 } */
 
-@media all and (min-width: 880px){
+
+/* Use: https://markus.oberlehner.net/blog/creating-a-responsive-alternating-two-column-layout-with-flexbox/ */
+
+@media all and (min-width: 600px){
   
+  header{
+    background-attachment: fixed; /*Parallax effect */
+  }
+
+  .container {
+    flex-flow: row wrap;
+  }
+  
+  .history {
+    order: -1;
+  }
+  
+  .container img {
+    /* display: block; */
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+  .img1_top {
+    display: none;
+  }
+
+  .img1_lower, .img {
+    display:block;
+  }
+  
+  .recipe {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+  }
+
+  .recipe h2, p {
+    grid-column: 1/ span 2;
+  }
+
+  .ingredients {
+    grid-column: 1/ span 1;
+  }
+
+  .tools {
+    grid-column: 2/ span 1;
+  }
+  .button_container{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+  }
+  button {
+    color:#F6F5F4;
+    padding: 5px 10px;
+    border: 1px solid #250603;
+    border-radius: 2px;
+    background-color: rgba(75, 13, 7, 90%);
+    font-size: 85%;
+    margin-top: 0.5em;
+    cursor: pointer;
+  }
+
+  button:hover, button:active {
+    background-color:rgb(37, 6, 3);
+  }
+
+  .gallery {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+  }
+
+  .basic_card {
+    height: 40vh;
+    margin: 1.5em 1em;
+  }
+
+  .gallery img {
+    max-height: 100%;
+    object-fit: cover;
+    margin: 0.25em;
+    padding: 0.25em;
+  }
+
+  .previous, .next {
+    display:inline;
+  }
+}
+
+@media all and (min-width: 1025px){
+  /* * {
+    box-sizing: border-box;
+  } */
+
   header{
     background-attachment: fixed; /*Parallax effect */
   }
@@ -349,29 +486,90 @@ https://www.smashingmagazine.com/2020/02/magic-flip-cards-common-sizing-problem/
   #content-mobile, #content-nonmobile {
     display:block;
     padding: 0 8em;
-    border: none;}
+  }
+
+  h1 {
+    margin-top: 2em;
+  }
+
+  .dropdown {
+    visibility: hidden;
+    position:unset;
+    padding: 0;
+    margin: 0;
+    outline: 0;
+    text-align: center;
+  }  
+
+  .dropdown-content {
+    visibility: visible;
+    opacity: 1;
+    background: none;
+    padding: 0;
+    top: 0;
+    left: 0;
+    transform: none;
+    transition: none;
+    box-shadow: none;
+    margin: 0.5em 1.5em;
+    border: 1px solid #250603;
+    border-radius: 2px;
+    background-color: rgba(75, 13, 7, 90%);
+    display: relative;
+  }
+
+  .dropdown-content li {
+    display: inline-block;
+  }
   .container {
-    flex-direction: row;
+    display: flex;
+    flex-flow: column wrap;
+    width: 100%;
   }
+
+  .img_recipe1, .img_recipe2, .img_recipe3, .img_recipe4, .img_recipe5 {
+    display: grid;
+    position: relative;
+    align-items: center;
+    width: 75%;
+  }
+  .container img {
+    position: relative;
+    object-fit: cover;
+    max-height: 80%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
   .recipe {
-    padding: 10px;
-    flex: 50%;
-  }
-  img {
-    padding: 10px;
-    flex: 50%;
-  }
-  .gallery h2 {
-    display: block;
     position: absolute;
-    border: 10px solid #241909;
-    border-style: inset;
-    padding: 0.5em;
-    background-color: #e3e0ddbf;
-    z-index: -1;
+    max-width: 100%;
+    max-height: 80%;
+    margin-left: 0;
+    margin-right: 0;
+    overflow: auto;
+    padding-top: 0.5em;
   }
-  .gallery img:hover, img:focus {
-    opacity: 0.15;
+  
+  .img_recipe1, .img_recipe3, .img_recipe5 {
+    align-self: flex-start;
+    margin-left: 1em;
+  }
+
+  .img_recipe2, .img_recipe4 {
+    align-self: flex-end;
+  }
+  
+  .basic_card {
+    height: 40vh;
+    margin: 2em;
+  }
+  
+  .gallery img {
+    filter: grayscale(100%);
+  }
+  .gallery img:hover {
+    filter: none;
   }
 }
 
