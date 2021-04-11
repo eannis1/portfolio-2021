@@ -284,6 +284,7 @@ img {
   line-height: 1.5;
   text-align: left;
   background-color: #e3e0ddbf;
+  margin-left: 0.5em;
 }
 
 .recipe ul {
@@ -358,6 +359,10 @@ https://www.smashingmagazine.com/2020/02/magic-flip-cards-common-sizing-problem/
   color: #73130B;
 }
 
+.button_container {
+  display: none;
+}
+
 /* If :focus detected the color changes */
 /* .gallery:focus img {
   -webkit-animation-name: color_change;
@@ -381,7 +386,7 @@ https://www.smashingmagazine.com/2020/02/magic-flip-cards-common-sizing-problem/
 
 /* Use: https://markus.oberlehner.net/blog/creating-a-responsive-alternating-two-column-layout-with-flexbox/ */
 
-@media all and (min-width: 600px){
+@media all and (min-width: 625px){
   
   header{
     background-attachment: fixed; /*Parallax effect */
