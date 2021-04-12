@@ -389,9 +389,9 @@ https://www.smashingmagazine.com/2020/02/magic-flip-cards-common-sizing-problem/
 
 @media all and (min-width: 625px){
   
-  header{
-    background-attachment: fixed; /*Parallax effect */
-  }
+  /* header{
+    background-attachment: fixed; Parallax effect
+  } */
 
   .container {
     flex-flow: row wrap;
@@ -554,6 +554,7 @@ https://www.smashingmagazine.com/2020/02/magic-flip-cards-common-sizing-problem/
     position: relative;
     object-fit: cover;
     max-height: 80%;
+    min-height: 20em;
     margin-left: 0;
     margin-right: 0;
   }
