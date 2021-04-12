@@ -269,8 +269,7 @@ img {
   width: 80%;
   box-shadow: 0 0 10px #241909;
   padding: 0;
-  margin: 1em;
-  align-self: center;
+  margin: 1.5em;
 }
 .img1_lower {
   display:none;
@@ -284,7 +283,9 @@ img {
   line-height: 1.5;
   text-align: left;
   background-color: #e3e0ddbf;
-  margin-left: 0.5em;
+  /* margin-left: 0.5em; */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .recipe ul {
