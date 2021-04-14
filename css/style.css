@@ -570,7 +570,7 @@ footer {
     transform: none;
     transition: none;
     box-shadow: none;
-    margin: 1em 2em;
+    margin: 1em 1em;
     border: 1px solid #250603;
     border-radius: 2px;
     background-color: rgba(75, 13, 7, 90%);
