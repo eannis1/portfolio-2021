@@ -1,4 +1,8 @@
 /*Color palette generated through https://coolors.co/*/
+/* Custom cursors designed using https://css-tricks.com/using-css-cursors/ */
+/* Icon image is "olive" by Marie Van den Broeck, BE, 
+https://thenounproject.com/marie49/collection/cocktails/?i=168115 - note that I 
+recolored and resized the icon to make it work as a cursor. */
 
 html{
     scroll-behavior: smooth;
@@ -150,7 +154,7 @@ and https://lage.us/CSS-Onclick-Dropdown-Menu.html*/
   box-shadow: 0 0 10px #241909;
 }
 
-/*add icon to current link*/
+/* Added icon to current link */
 #home_icon:before {
   content: url("../images/noun_shaker_dark_small.png");
 }
@@ -183,6 +187,8 @@ and https://lage.us/CSS-Onclick-Dropdown-Menu.html*/
   content: url("../images/noun_shaker_dark_small.png");
 }
 
+
+/* Contact form modified from SI 539: Design of Complex Websites, Prof. Colleen van Lent, UMSI, Winter 2021 */
 .form_container {
   padding: 1em;
 }
@@ -227,7 +233,8 @@ input[type=submit] {
   font-family: inherit;
   padding: 14px 20px;
   margin: 8px 0;
-  cursor: pointer;
+  /* cursor: pointer; */
+  cursor: url('../images/olive_cursor.png'), auto;
   width: 100%;
 }
 
@@ -242,9 +249,77 @@ input[type=submit]:hover {
   justify-content: center;
 }
 
+/* Basic flip card design from https://www.w3schools.com/howto/howto_css_flip_card.asp */
+
+ /* The flip card container */
+ .flip-card {
+  background-color: transparent;
+  width: 4.5em;
+  height: 4.5em;
+  perspective: 1000px; /* Gives the 3D effect */
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1em;
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do a horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+/* To make the card work on a click, I followed: 
+https://stackoverflow.com/questions/62418249/css-flip-card-how-can-i-activate-the-flip-via-tab-so-it-is-keyboard-accessible */
+.flip-card:focus-within .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  color: black;
+}
+
+.flip-card-front img {
+  margin: 0.5em;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: #4b0d07;
+  box-shadow: 0 0 10px #241909;
+  color: white;
+  transform: rotateY(180deg);
+} 
+
+.flip-card-back a {
+  font-size: 0.75em;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+}
+
 .container a {
   margin-top: 1em;
 }
+
+/* Styling for content on Recipe Pages */
 
 .history {
   padding: 1em 0 0 0;
@@ -270,7 +345,10 @@ img {
   box-shadow: 0 0 10px #241909;
   padding: 0;
   margin: 1.5em;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
+
 .img1_lower {
   display:none;
 }
@@ -283,7 +361,6 @@ img {
   line-height: 1.5;
   text-align: left;
   background-color: #e3e0ddbf;
-  /* margin-left: 0.5em; */
   margin-left: auto;
   margin-right: auto;
 }
@@ -340,8 +417,6 @@ footer {
 }
 
 /* Image gallery modified from https://www.w3schools.com/css/css_image_gallery.asp*/
-/* https://www.w3schools.com/howto/howto_css_flip_card.asp, 
-https://www.smashingmagazine.com/2020/02/magic-flip-cards-common-sizing-problem/ */
 
 .gallery {
   display: flex;
@@ -364,34 +439,8 @@ https://www.smashingmagazine.com/2020/02/magic-flip-cards-common-sizing-problem/
   display: none;
 }
 
-/* If :focus detected the color changes */
-/* .gallery:focus img {
-  -webkit-animation-name: color_change;
-    animation-name: color_change;
-  -webkit-animation-duration: 0.5s;
-    animation-duration: 0.5s;
-  -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards; 
-}
-
-@-webkit-keyframes color_change {
-  0% {filter:grayscale();}
-  100% {filter:none;}
-}
-
-@keyframes color_change {
-  0% {filter:grayscale();}
-  100% {filter:none;}
-} */
-
-
-/* Use: https://markus.oberlehner.net/blog/creating-a-responsive-alternating-two-column-layout-with-flexbox/ */
-
+/*Tablet View*/
 @media all and (min-width: 625px){
-  
-  /* header{
-    background-attachment: fixed; Parallax effect
-  } */
 
   .container {
     flex-flow: row wrap;
@@ -437,26 +486,33 @@ https://www.smashingmagazine.com/2020/02/magic-flip-cards-common-sizing-problem/
   .tools {
     grid-column: 2/ span 1;
   }
+
   .button_container{
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
   }
+
   button {
-    color:#F6F5F4;
+    color: white;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
     padding: 5px 10px;
     border: 1px solid #250603;
     border-radius: 2px;
-    background-color: rgba(75, 13, 7, 90%);
+    background-color: rgba(75, 13, 7, 95%);
     font-size: 85%;
     margin-top: 0.5em;
-    cursor: pointer;
+    /* cursor: pointer; */
+    cursor: url('../images/olive_cursor.png'), auto;
   }
 
   button:hover, button:active {
     background-color:rgb(37, 6, 3);
   }
 
+  /* Gallery layout modified from: 
+  https://markus.oberlehner.net/blog/creating-a-responsive-alternating-two-column-layout-with-flexbox/ */
+  
   .gallery {
     display: flex;
     flex-flow: row wrap;
@@ -464,15 +520,13 @@ https://www.smashingmagazine.com/2020/02/magic-flip-cards-common-sizing-problem/
   }
 
   .basic_card {
-    height: 40vh;
-    margin: 1.5em 1em;
+    max-width: 50%;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .gallery img {
-    max-height: 100%;
     object-fit: cover;
-    margin: 0.25em;
-    padding: 0.25em;
   }
 
   .previous, .next {
@@ -480,13 +534,11 @@ https://www.smashingmagazine.com/2020/02/magic-flip-cards-common-sizing-problem/
   }
 }
 
+/* Desktop View */
 @media all and (min-width: 1025px){
-  /* * {
-    box-sizing: border-box;
-  } */
-
+  
   header{
-    background-attachment: fixed; /*Parallax effect */
+    background-attachment: fixed; /* Adding parallax effect */
   }
 
   #content-mobile, #content-nonmobile {
@@ -518,7 +570,7 @@ https://www.smashingmagazine.com/2020/02/magic-flip-cards-common-sizing-problem/
     transform: none;
     transition: none;
     box-shadow: none;
-    /* margin: 0.5em 3%; */
+    margin: 1em 2em;
     border: 1px solid #250603;
     border-radius: 2px;
     background-color: rgba(75, 13, 7, 90%);
@@ -528,14 +580,18 @@ https://www.smashingmagazine.com/2020/02/magic-flip-cards-common-sizing-problem/
   .dropdown-content li {
     display: inline-block;
   }
+
+  .dropdown-content li a {
+    cursor: url('../images/olive_cursor_white.png'), auto;
+  }
+
+  .button a {
+    cursor: url('../images/olive_cursor_white.png'), auto;
+  }
+
   .container {
-    /* position: absolute; */
     display: flex;
     flex-flow: column wrap;
-    /* width: auto;
-    height: auto; */
-    /* height: 100%; */
-    /* height: 75vh; */
   }
 
   .img_recipe1, .img_recipe2, .img_recipe3, .img_recipe4, .img_recipe5 {
@@ -543,12 +599,7 @@ https://www.smashingmagazine.com/2020/02/magic-flip-cards-common-sizing-problem/
     position: relative;
     align-items: end;
     width: 75%;
-    /* min-height: 560px; */
   }
-
-  /* .img_recipe1:nth-child(2) {
-    margin: 20em;
-  } */
 
   .container img {
     position: relative;
@@ -560,16 +611,9 @@ https://www.smashingmagazine.com/2020/02/magic-flip-cards-common-sizing-problem/
   }
 
   .recipe {
-    /* display: flex;
-    flex: 1; */
     position: absolute;
-    /* max-width: 100%; */
     max-height: 60%;
-    /* margin-left: 0;
-    margin-right: 0; */
     overflow: auto;
-    /* min-height: 0;
-    padding-top: 0.5em; */
     align-content: start;
   }
   
@@ -590,15 +634,23 @@ https://www.smashingmagazine.com/2020/02/magic-flip-cards-common-sizing-problem/
     margin-left: 48%;
   }
 
-  /* .img_recipe2 .recipe, .img_recipe4 .recipe {
-    margin-right: 30em;
-  } */
-  
   .basic_card {
-    height: 40vh;
-    margin: 2em;
+    margin: 0.25em;
+    max-width: 30%;
   }
   
+  .basic_card h2 {
+    padding-right: 3em;
+  }
+
+  .basic_card a {
+    cursor: url('../images/olive_cursor.png'), auto;
+  }
+
+  .basic_card img {
+    cursor: url('../images/olive_cursor_white.png'), auto;
+  }
+
   .gallery img {
     filter: grayscale(100%);
   }
@@ -607,9 +659,8 @@ https://www.smashingmagazine.com/2020/02/magic-flip-cards-common-sizing-problem/
   }
 }
 
-/*The code below is included for accessibility to turn off 
-  animations and movement for people who have modified their 
-  preferences to reduce motion.*/
+/* The code below is included for accessibility to turn off animations and movement for people who have 
+modified their preferences to reduce motion. */
 
 @media screen and (prefers-reduced-motion: reduce){
   html{
