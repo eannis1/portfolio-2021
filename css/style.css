@@ -18,6 +18,7 @@ body{
 
 body a {
   color: black;
+  cursor: url('../images/olive_cursor.png'), auto;
 }
 
 .skip a{
