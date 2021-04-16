@@ -30,6 +30,7 @@ body a {
   top: -50px;
   padding: 7px;
   -webkit-transition: top 0.5s ease-out;
+  -o-transition: top 0.5s ease-out;
   transition: top 0.5s ease-out;
   z-index: 1;
 }
@@ -44,6 +45,7 @@ header{
   background-size: cover;       /* Parallax effect */
   height:auto;                  /*Parallax effect */
   color: #F6F5F4;
+  -webkit-box-shadow: 0 0 10px #241909;
   box-shadow: 0 0 10px #241909;
   background-image: url('../images/home_image.jpg');
 }
@@ -146,13 +148,20 @@ and https://lage.us/CSS-Onclick-Dropdown-Menu.html*/
   /* Use the left from absolute position to shift the left side */
   left: 50%;
   /* Use translateX to shift the menu 50% of its width back to the left  */
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
   transform: translateX(-50%);
+  -webkit-transform-origin: top center;
+  -ms-transform-origin: top center;
   transform-origin: top center;
   opacity: 0.3;
   visibility: hidden;
+  -webkit-transition: 280ms all ease-out;
+  -o-transition: 280ms all ease-out;
   transition: 280ms all ease-out;
   z-index: 1;
   border-radius:2px;
+  -webkit-box-shadow: 0 0 10px #241909;
   box-shadow: 0 0 10px #241909;
 }
 
@@ -217,7 +226,6 @@ and https://lage.us/CSS-Onclick-Dropdown-Menu.html*/
   text-transform: uppercase;
 }
 
-
 /* Contact form modified from SI 539: Design of Complex Websites, Prof. Colleen van Lent, UMSI, Winter 2021 */
 .form_container {
   padding: 1em;
@@ -229,6 +237,7 @@ input {
   margin: 8px 0;
   display: inline-block;
   border: 1px solid #241909;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   font-family: inherit;
   font-size: 18px;
@@ -244,6 +253,7 @@ textarea {
   margin: 8px 0;
   display: inline-block;
   border: 1px solid #241909;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   font-family: inherit;
   font-size: 18px;
@@ -252,6 +262,7 @@ textarea {
 input[type=checkbox]{
   width: 5%;
   border: 1px solid #241909;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -273,22 +284,44 @@ input[type=submit]:hover {
 
 .container {
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column wrap;
   flex-flow: column wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 
 /* Basic flip card design from https://www.w3schools.com/howto/howto_css_flip_card.asp */
 
- /* The flip card container */
+ @keyframes fade_in {
+  from {width: 0.5em; opacity: 0;}
+  to {width: 4.5em; opacity: 1;}
+}
+
  .flip-card {
   background-color: transparent;
   width: 4.5em;
   height: 4.5em;
+  -webkit-perspective: 1000px;
   perspective: 1000px; /* Gives the 3D effect */
   margin-left: auto;
   margin-right: auto;
   margin-top: 1em;
+  -webkit-animation-name: fade_in;
+  animation-name: fade_in;
+  -webkit-animation-duration: 4s;
+  animation-duration: 4s;
+  -webkit-animation-delay: -1s;
+  animation-delay: -1s;
+  -webkit-animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
 }
 
 /* This container is needed to position the front and back side */
@@ -297,17 +330,24 @@ input[type=submit]:hover {
   width: 100%;
   height: 100%;
   text-align: center;
+  -webkit-transition: -webkit-transform 0.8s;
+  transition: -webkit-transform 0.8s;
+  -o-transition: transform 0.8s;
   transition: transform 0.8s;
+  transition: transform 0.8s, -webkit-transform 0.8s;
+  -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
 
 /* Do a horizontal flip when you move the mouse over the flip box container */
 .flip-card:hover .flip-card-inner {
+  -webkit-transform: rotateY(180deg);
   transform: rotateY(180deg);
 }
 /* To make the card work on a click, I followed: 
 https://stackoverflow.com/questions/62418249/css-flip-card-how-can-i-activate-the-flip-via-tab-so-it-is-keyboard-accessible */
 .flip-card:focus-within .flip-card-inner {
+  -webkit-transform: rotateY(180deg);
   transform: rotateY(180deg);
 }
 
@@ -332,8 +372,10 @@ https://stackoverflow.com/questions/62418249/css-flip-card-how-can-i-activate-th
 /* Style the back side */
 .flip-card-back {
   background-color: #4b0d07;
+  -webkit-box-shadow: 0 0 10px #241909;
   box-shadow: 0 0 10px #241909;
   color: white;
+  -webkit-transform: rotateY(180deg);
   transform: rotateY(180deg);
 } 
 
@@ -349,7 +391,6 @@ https://stackoverflow.com/questions/62418249/css-flip-card-how-can-i-activate-th
 }
 
 /* Styling for content on Recipe Pages */
-
 .history {
   padding: 1em 0 0 0;
 }
@@ -371,6 +412,7 @@ h2 {
 
 img {
   width: 80%;
+  -webkit-box-shadow: 0 0 10px #241909;
   box-shadow: 0 0 10px #241909;
   padding: 0;
   margin: 1.5em;
@@ -413,7 +455,11 @@ h3 {
 https://css-tricks.com/examples/ButtonMaker/# */
 
 .button {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
   justify-content: space-evenly;
 }
 
@@ -425,6 +471,7 @@ https://css-tricks.com/examples/ButtonMaker/# */
   border-radius: 2px;
   background-color: rgba(75, 13, 7, 90%);
   margin: 1em 1em 0 1em;
+  cursor: url('../images/olive_cursor_white.png'), auto;
 }
 
 .button a:hover, .button a:active {
@@ -440,17 +487,28 @@ footer {
   color: #F6F5F4;
   padding: 1em 0.5em 0.5em 0;
   text-align: center;
+  -webkit-box-shadow: 0 0 10px #241909;
   box-shadow: 0 0 10px #241909;
   margin-top: 1em;
+  position: -webkit-sticky;
   position: sticky;
 }
 
 /* Image gallery modified from https://www.w3schools.com/css/css_image_gallery.asp*/
 
 .gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column wrap;
   flex-flow: column wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   margin-bottom: 1em;
 }
@@ -462,6 +520,7 @@ footer {
 
 .basic_card a {
   color: #73130B;
+  cursor: url('../images/olive_cursor.png'), auto;
 }
 
 .button_container {
@@ -472,10 +531,15 @@ footer {
 @media all and (min-width: 625px){
 
   .container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row wrap;
     flex-flow: row wrap;
   }
   
   .history {
+    -webkit-box-ordinal-group: 0;
+    -ms-flex-order: -1;
     order: -1;
   }
   
@@ -493,10 +557,16 @@ footer {
   }
   
   .recipe {
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: auto auto;
     grid-template-columns: auto auto;
+    -ms-grid-rows: auto auto;
     grid-template-rows: auto auto;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
     justify-content: space-evenly;
+    -ms-flex-line-pack: space-evenly;
     align-content: space-evenly;
     margin-left: auto;
     margin-right: auto;
@@ -504,20 +574,32 @@ footer {
   }
 
   .recipe h2, p {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
     grid-column: 1/ span 2;
   }
 
   .ingredients {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
     grid-column: 1/ span 1;
   }
 
   .tools {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
     grid-column: 2/ span 1;
   }
 
   .button_container{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row wrap;
     flex-flow: row wrap;
+    -ms-flex-pack: distribute;
     justify-content: space-around;
   }
 
@@ -541,8 +623,15 @@ footer {
   https://markus.oberlehner.net/blog/creating-a-responsive-alternating-two-column-layout-with-flexbox/ */
   
   .gallery {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row wrap;
     flex-flow: row wrap;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
     justify-content: space-evenly;
   }
 
@@ -553,6 +642,7 @@ footer {
   }
 
   .gallery img {
+    -o-object-fit: cover;
     object-fit: cover;
   }
 
@@ -594,8 +684,13 @@ footer {
     top: 0;
     left: 0;
     right: 0;
+    -webkit-transform: none;
+    -ms-transform: none;
     transform: none;
+    -webkit-transition: none;
+    -o-transition: none;
     transition: none;
+    -webkit-box-shadow: none;
     box-shadow: none;
     margin: 1em 1em;
     border: 1px solid #250603;
@@ -611,24 +706,27 @@ footer {
   .skip a {
     z-index: 3;
   }
-  .button a {
-    cursor: url('../images/olive_cursor_white.png'), auto;
-  }
-
+  
   .container {
-    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column wrap;
     flex-flow: column wrap;
   }
 
   .img_recipe1, .img_recipe2, .img_recipe3, .img_recipe4, .img_recipe5 {
+    display: -ms-grid;
     display: grid;
     position: relative;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
     align-items: end;
     width: 75%;
   }
 
   .container img {
     position: relative;
+    -o-object-fit: cover;
     object-fit: cover;
     max-height: 80%;
     min-height: 20em;
@@ -640,10 +738,12 @@ footer {
     position: absolute;
     max-height: 60%;
     overflow: auto;
+    -ms-flex-line-pack: start;
     align-content: start;
   }
   
   .img_recipe1, .img_recipe3, .img_recipe5 {
+    -ms-flex-item-align: start;
     align-self: flex-start;
     margin-left: 1em;
   }
@@ -653,6 +753,7 @@ footer {
   }
 
   .img_recipe2, .img_recipe4 {
+    -ms-flex-item-align: end;
     align-self: flex-end;
   }
 
@@ -669,15 +770,12 @@ footer {
     padding-right: 3em;
   }
 
-  .basic_card a {
-    cursor: url('../images/olive_cursor.png'), auto;
-  }
-
   .basic_card img {
     cursor: url('../images/olive_cursor_white.png'), auto;
   }
 
   .gallery img {
+    -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
   }
   .gallery img:hover {
@@ -702,4 +800,18 @@ modified their preferences to reduce motion. */
   header{
     background-attachment: initial;
   }
+
+  .flip-card {
+    -webkit-animation: none;
+    animation: none;
+  }
+
+  .flip-card-inner {
+    -webkit-transition: none;
+    -o-transition: none;
+    transition: none;
+    -webkit-transform-style: none;
+    transform-style: none;
+  }
+  
 }
